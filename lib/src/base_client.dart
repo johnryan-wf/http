@@ -53,7 +53,7 @@ abstract class BaseClient implements Client {
   ///
   /// For more fine-grained control over the request, use [send] instead.
   Future<Response> post(url, {Map<String, String> headers, body,
-      Encoding encoding, boo withCredentials}) =>
+      Encoding encoding, bool withCredentials}) =>
     _sendUnstreamed("POST", url, headers, body, encoding, withCredentials);
 
   /// Sends an HTTP PUT request with the given headers and body to the given
